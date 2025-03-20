@@ -15,4 +15,11 @@ export function getCurrentWeather(locationDetails:Location): Promise<WeatherResp
    return axios.get(url).then(response => response.data);
 }
 
+export function displayLocation(locationDetails: Location){
+const cityElm = document.getElementById('location-name')as HTMLElement;
+cityElm.innerText= locationDetails.name;
+
+const countryElm= document.getElementById('country')as HTMLElement;
+countryElm.innerText= locationDetails.country;
+}
 
