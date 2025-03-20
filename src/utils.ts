@@ -86,7 +86,8 @@ export function updateBackground(weathercode: number, isDay: number) {
     case "9":
       document.body.className = "thunderstorm";
       break;
-      default : document.body.className = " ";
+    default:
+      document.body.className = " ";
       break;
   }
 }

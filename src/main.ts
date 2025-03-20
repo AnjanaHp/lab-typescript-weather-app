@@ -1,4 +1,10 @@
-import { displayLocation,displayWeatherData,getCurrentWeather,getLocation, updateBackground} from "./utils";
+import {
+  displayLocation,
+  displayWeatherData,
+  getCurrentWeather,
+  getLocation,
+  updateBackground,
+} from "./utils";
 
 // src/main.ts
 const form = document.getElementById("weather-form") as HTMLFormElement;
@@ -23,10 +29,12 @@ form.addEventListener("submit", (event) => {
     })
     .then((weatherData) => {
       displayWeatherData(weatherData);
-      updateBackground(weatherData.current_weather.weathercode, weatherData.current_weather.is_day );
+      updateBackground(
+        weatherData.current_weather.weathercode,
+        weatherData.current_weather.is_day
+      );
     })
     .catch((error) => {
       console.log("Error getting weather data", error);
     });
 });
-
