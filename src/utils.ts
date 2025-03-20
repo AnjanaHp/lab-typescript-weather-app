@@ -23,3 +23,14 @@ const countryElm= document.getElementById('country')as HTMLElement;
 countryElm.innerText= locationDetails.country;
 }
 
+
+export function displayWeatherData(obj:WeatherResponse){
+const temperatureElm = document.getElementById('temperature') as HTMLElement;
+temperatureElm.innerText = 'Temperature : obj.current_weather.temperature + obj.current_weather_units.temperature ';
+
+const windSpeedElm = document.getElementById('windspeed') as HTMLElement;
+windSpeedElm.innerText= 'Windspeed: obj.current_weather.windspeed + obj.current_weather_units.windspeed';
+
+const windElm = document.getElementById('winddirection') as HTMLElement;
+windElm.innerText = 'Winddirection: obj.current_weather.winddirection+obj.current_weather_units.winddirection';
+}
